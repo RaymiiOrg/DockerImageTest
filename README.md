@@ -6,6 +6,7 @@ You can see the image on Docker Hub here: https://hub.docker.com/r/raymii/alpine
 
 Only runs NeoFetch, output from running on a github runner:
 
+```
 root@27feb305bb5e 
 ----------------- 
 OS: Alpine Linux v3.19 x86_64 
@@ -17,4 +18,4 @@ Shell: ash
 Resolution: 1024x768 
 CPU: AMD EPYC 7763 (2) @ 3.242GHz 
 Memory: 749MiB / 7929MiB 
-                        
+```                        `````````
