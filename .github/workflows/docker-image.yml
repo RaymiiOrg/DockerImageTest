@@ -33,5 +33,8 @@ jobs:
         file: ./src/Dockerfile
         push: true
         tags: ${{ steps.meta.outputs.tags }}
-        labels: ${{ steps.meta.outputs.labels }}    
+        labels: ${{ steps.meta.outputs.labels }}
+        
+    - name: Run docker image
+      run: docker run raymii/alpine-test:master
     
