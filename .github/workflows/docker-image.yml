@@ -7,7 +7,7 @@ on:
     branches: [ "master" ]
 
 jobs:
-  download-and-validate-files:
+  build-and-publish-image:
     runs-on: ubuntu-latest  
     steps:
     - name: Checkout code
@@ -26,11 +26,12 @@ jobs:
         images: raymii/alpine-test
 
     - name: Build and push Docker image
-      id: push
+      id: push      
       uses: docker/build-push-action@3b5e8027fcad23fda98b2e3ac259d8d67585f671
       with:
         context: .
-        file: ./Dockerfile
+        working-directory: 
+        file: ./src/Dockerfile
         push: true
         tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
